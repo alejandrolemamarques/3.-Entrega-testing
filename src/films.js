@@ -24,7 +24,7 @@ function moviesAverageOfDirector(array, director) {
 
 // Exercise 4:  Alphabetic order by title
 function orderAlphabetically(array) {
-  const result = array.map((movie) => movie.title).sort()
+  const result = array.map((movie) => movie.title).sort();
   return result.slice(0, 20);
 }
 
@@ -36,13 +36,26 @@ function orderByYear(array) {
 }
 
 // Exercise 6: Calculate the average of the movies in a category
-function moviesAverageByCategory() {}
+function moviesAverageByCategory(array, genre) {
+  const filteredArray = array.filter(
+    (movie) => movie.genre.includes(genre) && movie.score != null
+  );
+  if (filteredArray.length === 0) return 0;
+
+  const sum = filteredArray.reduce((acc, movie) => acc + movie.score, 0);
+  const result = Number((sum / filteredArray.length).toFixed(2));
+  return result;
+}
 
 // Exercise 7: Modify the duration of movies to minutes
-function hoursToMinutes() {}
+function hoursToMinutes(array) {
+
+}
 
 // Exercise 8: Get the best film of a year
-function bestFilmOfYear() {}
+function bestFilmOfYear(array, year) {
+
+}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */

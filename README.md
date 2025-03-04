@@ -1,86 +1,134 @@
-# Sprint 3 IT Academy | Video management tool
+# 3. Testing Project
 
-## Introduction
+## 📄 Description
 
-A company in the audiovisual sector has asked us for a web application that will allow their employees to quickly find movies from a large database they have, since the process is currently done manually.
+This project demonstrates the implementation of unit testing practices using Jest. It includes a collection of functions for movie data manipulation and analysis, with comprehensive test coverage to ensure functionality.
 
-You will be in charge of setting up the core of the application: all the logic of filtering and sorting of movies. You have 2 weeks to finish, which is how long this sprint lasts.
+## 💻 Technologies Used
 
-<br>
+- Jest
+- JavaScript
+- Node.js
 
-## Requirements
+## 📋 Requirements
 
+- Node.js (v14 or higher)
+- NPM (v6 or higher)
+- Git
 
-1. Clone this repo
-```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
+## 📦 Dev Dependencies
+
+```json
+{
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
 ```
 
-2. Unlink your repo from the itacademy repository
-```bash
-$ git remote rm origin
+These testing packages will be automatically installed when you run `npm install`.
+
+## 🛠️ Installation
+
+1. Clone this repository:
+
+   ```sh
+   git clone https://github.com/alejandrolemamarques/3.-Entrega-testing.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```sh
+   cd 3.-Entrega-testing
+   ```
+
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+## ▶️ Running Tests
+
+### Unit Tests
+
+```sh
+npm run test
 ```
 
-3. Link your repo to the repository you have to create in your github account
-```bash
-$ git remote add origin <your repo name!>
+Running the tests will generate a `test-results.html` file with a detailed, user-friendly visualization of all test results. This includes:
+
+- Test suite summaries
+- Individual test results with timing
+- Pass/fail status for each test
+- Detailed test descriptions
+
+### Watch Mode
+
+```sh
+npm run test:watch
 ```
 
-<br>
+## 🧪 Project Features
 
-## Submission
+The project includes the following functions, each with its corresponding test suite:
 
-1. Upon completion, run the following commands:
+1. `getAllDirectors`: Extract all directors from movie collection
+2. `getMoviesFromDirector`: Filter movies by director
+3. `moviesAverageOfDirector`: Calculate average score of a director's movies
+4. `orderAlphabetically`: Sort movies by title
+5. `orderByYear`: Sort movies by year and title
+6. `moviesAverageByCategory`: Calculate average score by movie genre
+7. `hoursToMinutes`: Convert movie durations to minutes
+8. `bestFilmOfYear`: Find the highest-rated movie of a given year
 
-```bash
-$ git add .
-$ git commit -m "Sprint Solution"
-$ git push origin master
+## 📁 Project Structure
+
+```
+project-root/
+├── src/
+│   ├── films.js      # Main functions implementation
+│   └── data.js       # Movie data
+├── tests/
+│   └── films.spec.js # Test suites
+├── package.json
+└── README.md
 ```
 
-2. Create Pull Request.
+## 🎯 Testing Approach
 
-3. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
+Each function is tested for:
 
+1. **Function Declaration**
 
+   - Verify function exists
+   - Check return type
 
-<br>
+2. **Input Handling**
 
-## Introduction
+   - Test with valid inputs
+   - Verify array manipulation
+   - Check edge cases
 
-The statement of the exercise is available on the virtual campus.
+3. **Output Validation**
+   - Verify correct calculations
+   - Check sorting and filtering
+   - Validate data transformations
 
-<br>
+## 🤝 Contributing
 
-## Tests!
-
-
-```shell
-$ npm install
-$ npm run test:watch
-```
-
-And last, open the generated `test-results.html` file with the "Live Server" VSCode extension to see test results.
-
-Apart from the statement, you will know exactly what you are asked to do by looking at the file `tests/films.spec.js`, all tests are already defined here!
-
-<br>
-
-## Instructions
-
-You have the following indications from the frontend responsible:
-
-- It is mandatory to implement all loops in ES6 (using map, reduce, filter and sort to manipulate arrays).
-
-- As at the moment we don't consume data from a server using an API, we will work with data from the src/data.js archive. For the moment we will implement the logic using
-an array of information about 250 movies.
-
-- The implementation is about processing this array of movies, to display it as requested in each exercise.
-
-- The logic to implement will be placed in the src/films.js file.
-
-- You don't need to show the result of each function on the screen. Your goal is to pass the tests.  More information on how to program oriented to pass tests at the end of the document.
-
-- Don't forget to include the capture of the test results in the virtual campus.
-
-
+1. Fork the repository
+2. Create your feature branch:
+   ```sh
+   git checkout -b feature/your-feature-name
+   ```
+3. Write tests for new features
+4. Ensure all tests pass
+5. Commit your changes:
+   ```sh
+   git commit -m "Add: description of changes"
+   ```
+6. Push to your branch:
+   ```sh
+   git push origin feature/your-feature-name
+   ```
+7. Create a Pull Request
