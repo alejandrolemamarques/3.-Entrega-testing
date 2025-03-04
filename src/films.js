@@ -29,7 +29,11 @@ function orderAlphabetically(array) {
 }
 
 // Exercise 5: Order by year, ascending
-function orderByYear() {}
+function orderByYear(array) {
+  return [...array].sort((a, b) =>
+    a.year === b.year ? a.title.localeCompare(b.title) : a.year - b.year
+  );
+}
 
 // Exercise 6: Calculate the average of the movies in a category
 function moviesAverageByCategory() {}
